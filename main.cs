@@ -66,9 +66,8 @@ namespace higherlowergame
                 cardNum = int.Parse(cns);
             }
 
-            int xInterval = 3;
-            int yInterval = 2;
-
+            
+            //redo this to place the card at positions and not just place one if the interval is whatever
             for (int n = startY; n<=startY+cardHeight; n++)
             {
                 for (int i = startX; i <= startX+cardWidth; i++)
@@ -77,7 +76,7 @@ namespace higherlowergame
                     Console.SetCursorPosition(i, n);
                     if ( n-startY>=1 && n - startY< startY+cardHeight-1 && i - startX >= 1 && i - startX < startX+cardWidth)
                     {
-                        if (cardNum > 0 && i%xInterval==0 )
+                        if (cardNum > 0)
                         {
                             Console.Write(suit);
                             
